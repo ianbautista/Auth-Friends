@@ -19,9 +19,9 @@ export default function FriendsList() {
 			/>
 			<button onClick={handleClick}>Add a New Friend</button>
 			<div className="friend-cards">
-				{loading === true && <Loader type="Audio" color="cyan" height={150} width={150} />}
+				{loading === true && <Loader type="Audio" color="#1fddff" height={150} width={150} />}
 				{friends.map((friend) => (
-					<Friends key={friend.id} friend={friend} />
+					<Friends key={friend.id} friend={friend} deleteFriend={deleteFriend} />
 				))}
 			</div>
 		</div>

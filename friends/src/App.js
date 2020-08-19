@@ -5,6 +5,7 @@ import "./App.css";
 import Login from "./components/Login";
 import FriendsList from "./components/FriendsList";
 import PrivateRoute from "./components/PrivateRoute";
+import AddFriend from "./components/AddFriend";
 
 import { FriendsContext } from "./contexts/FriendsContext";
 import { axiosWithAuth } from "./utils/axiosWithAuth";
@@ -44,6 +45,15 @@ export default function App() {
 			});
 	};
 
+	const deleteFriend = (id) => {
+		axiosWithAuth()
+			.delete(`/api/friends/${id}`)
+			.then((res) => {
+				setFriends([]);
+				getFriends();
+			});
+	};
+
 	return (
 		<Router>
 			<FriendsContext.Provider
@@ -53,6 +63,7 @@ export default function App() {
 					friends,
 					loading,
 					postNewFriend,
+					deleteFriend,
 				}}
 			>
 				<div className="App">
@@ -75,6 +86,7 @@ export default function App() {
 				<div className="main-content">
 					<Switch>
 						<PrivateRoute path="/friends" component={FriendsList} />
+						<PrivateRoute path="/add-friend" component={AddFriend} />
 						<Route path="/login" component={Login} />
 						<Route exact path="/">
 							<h1>Welcome Friends!</h1>
