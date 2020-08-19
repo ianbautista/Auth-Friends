@@ -44,15 +44,6 @@ export default function App() {
 			});
 	};
 
-	const deleteFriend = (id) => {
-		axiosWithAuth()
-			.delete(`/api/friends/${id}`)
-			.then((res) => {
-				setFriends([]);
-				getFriends();
-			});
-	};
-
 	return (
 		<Router>
 			<FriendsContext.Provider
@@ -62,7 +53,6 @@ export default function App() {
 					friends,
 					loading,
 					postNewFriend,
-					deleteFriend,
 				}}
 			>
 				<div className="App">

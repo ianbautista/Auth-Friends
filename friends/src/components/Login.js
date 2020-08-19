@@ -65,7 +65,7 @@ export default function Login(props) {
 					</>
 				)}
 			</form>
-			{isLoading && <Loader />}
+			{isLoading && <Loader type="Audio" color="cyan" height={150} width={150} />}
 		</div>
 	);
 }

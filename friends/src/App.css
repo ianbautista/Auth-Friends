@@ -2,9 +2,11 @@
   text-decoration: none;
   text-align: center;
   margin: 0;
+  color: black;
 }
 
 .App {
+  margin-top: 2%;
   text-align: center;
 }
 
