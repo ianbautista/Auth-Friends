@@ -1,6 +1,7 @@
 *{
   text-decoration: none;
-  
+  text-align: center;
+  margin: 0;
 }
 
 .App {
@@ -11,17 +12,21 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 
 .App-header img{
   justify-self: start;
   align-items: center;
-  border: 2px solid red;
-  height: 30px;
+  height: 35px;
+  /* border: 2px solid red; */
 }
 
 .nav {
   align-items: center;
+}
+
+.main-content img {
+  width: 100vw;
 }

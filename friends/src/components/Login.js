@@ -3,6 +3,8 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import Loader from "react-loader-spinner";
 
+import "./Login.css";
+
 export default function Login(props) {
 	const [credentials, setCredentials] = useState({
 		username: "",
@@ -28,37 +30,33 @@ export default function Login(props) {
 	};
 
 	return (
-		<>
+		<div className="Login-Div">
 			<form onSubmit={handleSubmit(onSubmit)}>
-				<form>
-					<label for="username">Username</label>
-					<input
-						className="form-control"
-						name="username"
-						type="username"
-						id="username"
-						onChange={handleChange}
-						ref={register({
-							required: "Required",
-						})}
-					/>
-					<span>{errors.email && errors.email.message}</span>
-				</form>
-				<form>
-					<label for="password">Password</label>
-					<input
-						className="form-control"
-						type="password"
-						name="password"
-						id="password"
-						onChange={handleChange}
-						ref={register({
-							required: "Required",
-							validate: (value) => value !== "password" || "Use a better password",
-						})}
-					/>
-					<span>{errors.password && errors.password.message}</span>
-				</form>
+				<label for="username">Username</label>
+				<input
+					className="form-control"
+					name="username"
+					type="username"
+					id="username"
+					onChange={handleChange}
+					ref={register({
+						required: "Required",
+					})}
+				/>
+				<span>{errors.email && errors.email.message}</span>
+				<label for="password">Password</label>
+				<input
+					className="form-control"
+					type="password"
+					name="password"
+					id="password"
+					onChange={handleChange}
+					ref={register({
+						required: "Required",
+						validate: (value) => value !== "password" || "Use a better password",
+					})}
+				/>
+				<span>{errors.password && errors.password.message}</span>
 
 				{!isLoading && (
 					<>
@@ -68,6 +66,6 @@ export default function Login(props) {
 				)}
 			</form>
 			{isLoading && <Loader />}
-		</>
+		</div>
 	);
 }

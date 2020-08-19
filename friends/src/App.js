@@ -88,6 +88,10 @@ export default function App() {
 						<Route path="/login" component={Login} />
 						<Route exact path="/">
 							<h1>Welcome Friends!</h1>
+							<img
+								src="http://getwallpapers.com/wallpaper/full/2/6/c/1017915-friends-tv-show-wallpapers-1920x1080-for-mac.jpg"
+								alt="friends cast"
+							/>
 						</Route>
 					</Switch>
 				</div>
