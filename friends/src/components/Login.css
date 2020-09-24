@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+.Login-Div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("http://getwallpapers.com/wallpaper/full/4/2/c/1017922-friends-tv-show-wallpapers-2560x1600-for-xiaomi.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 95vw;
+    height: 95vh;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+}
+
+.Login-Div form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-right: 20%;
+    color: white;
+    overflow: auto;
+}
+
+.Login-Div form label {
+    color: white;
+}
